@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
-import EpisodeDescription from "../repository/EpisodeDescription";
+import {Component} from 'react';
+import EpisodeDescription from "../repository/FIlms";
+import Films from "../repository/FIlms";
 
 class FarGalaxy extends Component {
     constructor(props) {
@@ -10,10 +11,17 @@ class FarGalaxy extends Component {
     }
 
     componentDidMount = () => {
-        EpisodeDescription.getRandomDescription().then(data => {
-            this.setState({...this.state, episodeCrawl: data})
-        })
-
+        //adding session storage to prevent fetch on
+        // every component mount
+        const opening_crawl = sessionStorage.getItem('opening_crawl')
+        if (opening_crawl) {
+            this.setState({episodeCrawl: opening_crawl})
+        } else {
+            Films.saveCrawlToSessionStorage();
+            Films.getFilmDescription().then(data => {
+                this.setState({...this.state, episodeCrawl: data})
+            })
+        }
     }
 
     render() {
