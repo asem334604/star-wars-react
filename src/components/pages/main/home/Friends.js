@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {friends}  from '../utils/constants'
+import {friends}  from '../../../../utils/constants'
 import Friend from "./Friend";
 
 class Friends extends Component {

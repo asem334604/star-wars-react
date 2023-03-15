@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import style from './contact.modules.css'
-import Planets from "../repository/Planets";
+import Planets from "../../../../repository/Planets";
 
 class Contact extends Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class Contact extends Component {
     }
 
     componentDidMount = () => {
-        console.log('con=mponentdidmount')
+        console.log('componentdidmount')
         Planets.getAllPlanets().then(data => {
             const planets = data.map(value => <option key={value.name}>{value.name}</option>)
             this.setState({planets: planets});

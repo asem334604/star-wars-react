@@ -3,10 +3,10 @@ import GetFilmsById from "../data/GetFilmsById";
 
 class FIlms extends Component {
     static getFilmDescription () {
-        GetFilmsById().then(data => JSON.stringify(data.opening_crawl))
+        return GetFilmsById().then(data => JSON.stringify(data.opening_crawl))
     }
     static saveCrawlToSessionStorage () {
-        GetFilmsById().then(data => {
+        return GetFilmsById().then(data => {
             sessionStorage.setItem('opening_crawl', JSON.stringify(data.opening_crawl));
         })
     }

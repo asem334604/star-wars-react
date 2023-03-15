@@ -1,6 +1,5 @@
 import {Component} from 'react';
-import EpisodeDescription from "../repository/FIlms";
-import Films from "../repository/FIlms";
+import Films from "../../../../repository/FIlms";
 
 class FarGalaxy extends Component {
     constructor(props) {
@@ -45,7 +44,7 @@ export default FarGalaxy;
 // {/*STAR, an*/}
 // {/*armored space station with enough power to destroy an entire planet. Pursued by the Empire's*/}
 // {/*sinister agents,*/}
-// {/*Princess Leia races home aboard her starship, custodian of the stolen plans that can save her*/}
+// {/*Princess Leia races main aboard her starship, custodian of the stolen plans that can save her*/}
 // {/*people*/}
 // {/*and*/}
 // {/*restore*/}
@@ -66,7 +65,7 @@ export default FarGalaxy;
 // {/*remote*/}
 // {/*probes into the far reaches of space.... title: Return of the Jedi episode: 6 release_date:*/}
 // {/*1983-05-25 opening*/}
-// {/*crawl: Luke Skywalker has returned to his home planet of Tatooine in an attempt to rescue his*/}
+// {/*crawl: Luke Skywalker has returned to his main planet of Tatooine in an attempt to rescue his*/}
 // {/*friend*/}
 // {/*Han Solo*/}
 // {/*from the clutches of the vile gangster Jabba the Hutt. Little does Luke know that the GALACTIC*/}

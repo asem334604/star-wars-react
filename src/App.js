@@ -1,31 +1,24 @@
 import './App.css';
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import Header from "./components/general/header/Header";
+import Main from "./components/pages/main/Main";
+import Footer from "./components/general/footer/Footer";
 import React, {Component} from 'react';
+import AppProvider from "./AppProvider";
+
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            activePage: null
-        }
-    }
-    changeActivePage = (page) => {
-        this.setState({
-            activePage: page
-        })
-    }
-
     render() {
         return (
-            <div className="container-fluid">
-                <Header changePage = {this.changeActivePage}/>
-                <Main page={this.state.activePage}/>
-                <Footer/>
-            </div>
+            <AppProvider>
+                <div className="container-fluid">
+                    <Header/>
+                    <Main/>
+                    <Footer/>
+                </div>
+            </AppProvider>
         );
     }
 }
 
 export default App;
+

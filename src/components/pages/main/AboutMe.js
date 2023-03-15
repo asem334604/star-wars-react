@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
-import Films from "../repository/FIlms";
-import Peoples from "../repository/Peoples";
-import API from "../utils/API";
+import Peoples from "../../../repository/Peoples";
 
 class AboutMe extends Component {
-
     constructor(props) {
         super(props);
         this.peoples = localStorage.getItem('peoples');
@@ -82,7 +79,6 @@ class AboutMe extends Component {
         } else {
             return this.renderPeoples();
         }
-
     }
 }
 
